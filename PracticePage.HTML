@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html>
+    <head> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
+    <link rel="stylesheet" href="PracticeCSS.css">
+
+
+    <a onclick="showText('text1','text2')" href="javascript:void(0);">Show Text 1</a>
+    <div id="text1" class="hide"> text1 </div>
+    <a onclick="showText('text2','text1')" href="javascript:void(0);">Show Text 2</a>
+    <div id="text2" class="hide"> text2 </div>
+    
+    <script>
+        function showText(showElements, hideElements){
+            for (var i=0;i<showElements.length; i++) {
+                document.getElementById(showElements[i]).className = "show";
+            }
+
+            for (var i=0;i<hideElements.length; i++) {
+                document.getElementById(hideElements[i]).className = "hide";
+            }
+        }
+    </script>
